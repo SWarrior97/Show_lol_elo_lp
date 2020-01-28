@@ -21,10 +21,10 @@ node app.js SummonerName
 ### OutPut
 The app generate two file<br>
 LP.txt -> That contains the elo and the elo of the given summoner.<br>
-## EX:
+#### Example:
 Gold II: 22 LP<br>
 UserInfo.txt -> That contains the summonerName, the elo, the lp, how much wins and loses <br>
-## EX:
+#### Example:
 Teste <br>
 Elo:Gold III <br>
 LP:22 <br>
