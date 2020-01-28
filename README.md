@@ -3,6 +3,9 @@
 
 This projet get a league of legends summoner name account and show the current elo and how much LP the account have.The app get the elo and lp and save it to LP.txt file. The app will keep updating the lp wich 25 min while running.
 
+## Attention
+To run the project you must have node installed. It can be downlaoded in this [url](https://nodejs.org/en/download/) 
+
 ## Installation
 ### Clone repository
 
