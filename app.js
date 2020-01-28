@@ -26,7 +26,7 @@ server.listen(port, hostname, () => {
     setInterval(function(){ 
         //code goes here that will be run every 5 seconds.
         getLP();    
-    }, 5000);
+    }, 1500000);
 });
 
 
@@ -90,7 +90,7 @@ function getLP(){
                     if (err) throw err;
                     console.log('Saved!');
                   });
-                var lp = User.elo +':'+User.lp+' LP';
+                var lp = User.elo +': '+User.lp+' LP';
                   fs.writeFile('LP.txt', lp, function (err) {
                     if (err) throw err;
                     console.log('Saved!');
