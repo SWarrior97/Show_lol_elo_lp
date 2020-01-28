@@ -1,7 +1,7 @@
 # Show_lol_elo_lp
 
 
-This projet get a league of legends summoner name account and show the current elo and how much LP the account have.The app get the elo and lp and save it to LP.txt file. The app will keep updating the lp wich 25 min while running.
+This projet get a league of legends summoner name account and show the current elo and how much LP the account have.The app get the elo and lp and save it to LP.txt file. The app will keep updating the lp each 25 min while running. The purpose is to help streamer show the current elo and how much lp.
 
 ## Attention
 To run the project you must have node installed. It can be downlaoded in this [url](https://nodejs.org/en/download/) 
