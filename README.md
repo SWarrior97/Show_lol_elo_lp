@@ -15,6 +15,9 @@ You must have node installed on your machine
 ```shell
 cd path_to_proj
 npm install
+```
+### Running
+```shell
 node app.js SummonerName
 ```
 
