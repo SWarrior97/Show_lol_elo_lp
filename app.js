@@ -53,7 +53,9 @@ function getLP(){
                 var divs = doc.getElementsByTagName('div');
                 var spans = doc.getElementsByTagName('span');
                 var title = doc.getElementsByTagName('title')[0].innerHTML;
-                var User = {summonerName:'',elo:'',lp:'',wins:'',loses:''};
+
+                if(!title.includes('Not Found')){
+                    var User = {summonerName:'',elo:'',lp:'',wins:'',loses:''};
 
                 User.summonerName = title.split('(')[0];
 
@@ -95,6 +97,9 @@ function getLP(){
                     if (err) throw err;
                     console.log('Saved!');
                   });  
+                }else{
+                    console.log("Summoner not found");
+                }
                 
             })
             .catch(function(err) {  
