@@ -1,3 +1,20 @@
+#!/usr/bin/env node
+
+const inquirer = require("inquirer");
+const chalk = require("chalk");
+const data = require("./data.json");
+
+
+// add response color
+const response = chalk.bold.blue;
+
+const summonerOptions = {
+  type: "list",
+  name: "summonerOptions",
+  message: "What is thy wish fellow summoner?",
+  choices: [...Object.keys(data), "Exit"]
+};
+
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -10,27 +27,18 @@ var currentSumonerName = '';
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-  
-});
 
-//1500000
-/*process.argv.forEach(function (val, index, array) {
-    console.log(index + ': ' + val);
-});*/
+});
 
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
     currentSumonerName = process.argv[2];
     getLP();
-    setInterval(function(){ 
+    setInterval(function(){
         //code goes here that will be run every 5 seconds.
-        getLP();    
+        getLP();
     }, 1500000);
 });
-
-
-
 
 
 
@@ -84,7 +92,7 @@ function getLP(){
                         User.loses = spans[i].innerHTML;
                     }
                 }
-                
+
                 console.log(User);
                 //User.lp = '100';
                 var string = User.summonerName +'\nElo:'+User.elo+'\nLP:'+User.lp+'\nWins:'+User.wins+'\nLoses:'+User.loses;
@@ -96,13 +104,16 @@ function getLP(){
                   fs.writeFile('LP.txt', lp, function (err) {
                     if (err) throw err;
                     console.log('Saved!');
-                  });  
+                    process.exit();
+                  });
                 }else{
                     console.log("Summoner not found");
+                    //end process
+                    process.exit();
                 }
-                
+
             })
-            .catch(function(err) {  
-                console.log('Failed to fetch page: ', err);  
+            .catch(function(err) {
+                console.log('Failed to fetch page: ', err);
             });
 }

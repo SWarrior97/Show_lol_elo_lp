@@ -1,6 +1,6 @@
 {
   "name": "lol_lp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -10,10 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
     "dom-parser": "^0.1.6",
     "express": "^4.17.1",
+    "figlet": "^1.2.4",
     "form-data": "^3.0.0",
     "fs": "*",
+    "inquirer": "^7.0.4",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2"
   }
